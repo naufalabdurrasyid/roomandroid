@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Dokuku</string>
+    <string name="nama">nama</string>
+    <string name="harga">harga</string>
+    <string name="edit">edit</string>
+    <string name="tambah_data">Tambah Data</string>
+</resources>

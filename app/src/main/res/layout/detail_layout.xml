@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/item_foto"
+                android:layout_width="150dp"
+                android:layout_height="220dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pendidikan" />
+            <TextView
+                android:id="@+id/tv_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_foto"
+                android:gravity="center"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                android:text="Pendidikan" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="munculkan data!"
+        android:id="@+id/btn_display"
+        android:background="#CC6633"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dataResult"/>
+
+</LinearLayout>
