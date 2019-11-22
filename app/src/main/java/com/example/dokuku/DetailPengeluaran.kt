@@ -1,5 +1,6 @@
 package com.example.dokuku
 
+import android.content.Intent
 import android.os.AsyncTask
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -15,6 +16,7 @@ class DetailPengeluaran : AppCompatActivity() {
         btn_display.setOnClickListener {
             GetPengeluaranData(this).execute()
         }
+        tv_item_name.setText(intent.getStringExtra("nama")?:"")
     }
 
     private class GetPengeluaranData(var context: DetailPengeluaran) :

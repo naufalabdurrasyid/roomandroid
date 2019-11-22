@@ -1,6 +1,7 @@
 package com.example.dokuku
 
 import android.app.Activity
+import android.app.PendingIntent.getActivity
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -62,12 +63,9 @@ class CardViewPengeluaran(val listPengeluaran: ArrayList<Data>) : RecyclerView.A
 //            startActivity(intent)
 //        }
         holder.btnDetail.setOnClickListener(View.OnClickListener { v ->
-            v.context.startActivity(
-                Intent(
-                    v.context,
-                    DetailPengeluaran::class.java
-                )
-            )
+            val intent = Intent(v.context, DetailPengeluaran::class.java)
+            intent.putExtra("nama", holder.tvName.text.toString())
+            v.context.startActivity(intent)
         })
 
     }

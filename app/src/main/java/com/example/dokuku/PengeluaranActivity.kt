@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import io.reactivex.disposables.CompositeDisposable
 import kotlinx.android.synthetic.main.detail_layout.*
+import kotlinx.android.synthetic.main.item_pengeluaran.*
 import kotlinx.android.synthetic.main.pengeluaran_layout.*
 import kotlinx.android.synthetic.main.tambah_layout.*
 import kotlinx.android.synthetic.main.tambah_layout.view.*
@@ -44,7 +45,10 @@ class PengeluaranActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
     }
+
+
 
     private class InsertTask(var context: PengeluaranActivity, var pengeluaran: Pengeluaran) :
         AsyncTask<Void, Void, Boolean>() {

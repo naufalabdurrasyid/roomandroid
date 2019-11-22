@@ -2,26 +2,26 @@ package com.example.dokuku
 
 object PengeluaranData {
     private val pengeluaranNama = arrayOf("Pendidikan",
-        "Olahraga",
+//        "Olahraga",
         "Kesehatan",
         "Elektronik",
         "Tagihan",
         "Makanan",
         "Hiburan",
-        "Amal",
+//        "Amal",
         "Transportasi",
         "Lainnya")
 
 
 
     private val pengeluaranFoto = intArrayOf(R.drawable.pendidikan,
-        R.drawable.olahraga,
+//        R.drawable.olahraga,
         R.drawable.kesehatan,
         R.drawable.elektronik,
         R.drawable.tagihan,
         R.drawable.makanan,
         R.drawable.hiburan,
-        R.drawable.amal,
+//        R.drawable.amal,
         R.drawable.transportasi,
         R.drawable.lainnya)
 
