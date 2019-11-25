@@ -4,6 +4,9 @@ import android.app.Activity
 import android.app.PendingIntent.getActivity
 import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,9 +21,12 @@ import com.bumptech.glide.request.RequestOptions
 import kotlinx.android.synthetic.main.item_pengeluaran.*
 import androidx.core.content.ContextCompat.startActivity
 import androidx.core.content.ContextCompat.startActivity
-
-
-
+import androidx.core.graphics.createBitmap
+import androidx.core.graphics.drawable.toBitmap
+import androidx.core.view.drawToBitmap
+import kotlinx.android.synthetic.main.item_pengeluaran.view.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class CardViewPengeluaran(val listPengeluaran: ArrayList<Data>) : RecyclerView.Adapter<CardViewPengeluaran.CardViewViewHolder>() {
@@ -44,6 +50,7 @@ class CardViewPengeluaran(val listPengeluaran: ArrayList<Data>) : RecyclerView.A
 
         val pengeluaran = listPengeluaran[position]
         Glide.with(holder.itemView.context)
+//            .asBitmap()
             .load(pengeluaran.photo)
             .apply(RequestOptions().override(350, 550))
             .into(holder.imgPhoto)
@@ -62,9 +69,14 @@ class CardViewPengeluaran(val listPengeluaran: ArrayList<Data>) : RecyclerView.A
 //
 //            startActivity(intent)
 //        }
-        holder.btnDetail.setOnClickListener(View.OnClickListener { v ->
+        holder.btnDetail.setOnClickListener(View.OnClickListener {
+                v ->
             val intent = Intent(v.context, DetailPengeluaran::class.java)
             intent.putExtra("nama", holder.tvName.text.toString())
+//            intent.putExtra("foto", pengeluaran.photo)
+
+            intent.putExtra("foto", holder.imgPhoto.drawable.toBitmap(160,160, Bitmap.Config.ARGB_8888))
+
             v.context.startActivity(intent)
         })
 
@@ -84,6 +96,7 @@ class CardViewPengeluaran(val listPengeluaran: ArrayList<Data>) : RecyclerView.A
 //                onItemClick?.invoke(this, DetailPengeluaran::class.java)
 //            }
 //        }
+
     }
 
     }
