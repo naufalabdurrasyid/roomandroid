@@ -28,10 +28,10 @@ class DetailPengeluaran : AppCompatActivity() {
         item_foto.setImageBitmap(intent.getParcelableExtra("foto"))
 //        Glide.with(this)
 //            .load(item_foto.setImageResource(intent.getIntExtra("foto", 0)))
-
-
-
-
+        btn_view_card.setOnClickListener {
+            val intent = Intent(this, DetailCardActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 

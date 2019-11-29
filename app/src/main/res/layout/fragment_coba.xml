@@ -2,35 +2,38 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/card_detail"
+    android:id="@+id/card_coba"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginLeft="8dp"
     android:layout_marginTop="4dp"
     android:layout_marginRight="8dp"
     android:layout_marginBottom="4dp"
-    card_view:cardCornerRadius="4dp">
+    card_view:cardCornerRadius="4dp"
+    android:onClick="btnSwitchBack"
+    >
 
     <RelativeLayout
+        android:id="@+id/oke"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center">
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/item_foto"
-            android:layout_width="150dp"
-            android:layout_height="220dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:scaleType="centerCrop"
-            tools:src="@color/colorAccent" />
+            android:src="@drawable/elektronik"/>
         <TextView
-            android:id="@+id/tv_item_name"
+            android:id="@+id/tv_nama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/item_foto"
             android:gravity="center"
-            android:textSize="50sp"
+            android:textSize="40sp"
             android:textStyle="bold"
-            tools:text="@string/nama" />
+            android:text="OKE" />
 
 
 
